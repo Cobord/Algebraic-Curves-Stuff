@@ -10,14 +10,78 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     28289,        683]
-NotebookOptionsPosition[     27657,        659]
-NotebookOutlinePosition[     28020,        675]
-CellTagsIndexPosition[     27977,        672]
+NotebookDataLength[     31008,        751]
+NotebookOptionsPosition[     30336,        726]
+NotebookOutlinePosition[     30699,        742]
+CellTagsIndexPosition[     30656,        739]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"Z", 
+       RowBox[{"(", 
+        RowBox[{"C", ",", "u"}], ")"}]}], " ", "=", " ", 
+      RowBox[{"Exp", "[", " ", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"m", "=", "0"}], "\[Infinity]"], 
+        RowBox[{
+         FractionBox[
+          SubscriptBox["N", "m"], "m"], 
+         SuperscriptBox[
+          RowBox[{"(", "u", ")"}], "m"]}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["N", "m"], " ", "=", " ", 
+      RowBox[{"count", " ", "points", " ", "over", " ", 
+       RowBox[{"q", "^", "m"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+      "By", " ", "Weil", " ", "theorem", " ", "can", " ", "express", " ", 
+       "this", " ", "as", " ", "P", 
+       RowBox[{
+        RowBox[{"(", "u", ")"}], "/", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "-", "u"}], ")"}], 
+          RowBox[{"(", 
+           RowBox[{"1", "-", "qu"}], ")"}]}], ")"}]}], " ", "where", " ", "P", 
+       RowBox[{"(", "u", ")"}], "\[IndentingNewLine]", "is", " ", "a", " ", 
+       RowBox[{"polynomial", " ", "\\", "prod"}], " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"omega_i", " ", "t"}]}], ")"}]}], " ", "=", " ", 
+      RowBox[{"1", "+", 
+       RowBox[{
+        RowBox[{"\\", "sum"}], " ", "e_k", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"-", "u"}], ")"}], "^", "k"}]}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+     "So", " ", "establish", " ", "dictionary", " ", "between", " ", "giving",
+       " ", "point", " ", "counts"}]}], ",", " ", 
+    RowBox[{
+     RowBox[{"giving", " ", "e_k"}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+     "Expanding", " ", "this", " ", "in", " ", "a", " ", "series", " ", 
+      "with", " ", "u", " ", "gives", " ", "the", " ", "point", " ", "counts",
+       " ", "over", " ", "symmetric", " ", "powers", " ", "of", " ", 
+      RowBox[{"C", ".", " ", "This"}], " ", "is", " ", "Kapranov", " ", 
+      "motivic", " ", "zeta", " ", "function"}]}]}], "\[IndentingNewLine]", 
+   "*)"}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{
+  3.7286710995721703`*^9, {3.7286711342957864`*^9, 3.728671429187069*^9}, 
+   3.728671607686302*^9, 3.728671687907905*^9, {3.728671740658492*^9, 
+   3.72867178864773*^9}}],
+
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", 
@@ -399,7 +463,7 @@ Cell[BoxData[
    3.7274125411149855`*^9}, {3.7274125780216675`*^9, 3.727412654869563*^9}, {
    3.7274126888263397`*^9, 3.727412809344848*^9}, {3.7274129279822083`*^9, 
    3.727413134202016*^9}, {3.7274152203766255`*^9, 3.727415229329856*^9}, 
-   3.7274152658813105`*^9}],
+   3.7274152658813105`*^9, {3.728671096212781*^9, 3.72867109816591*^9}}],
 
 Cell[CellGroupData[{
 
@@ -423,7 +487,9 @@ Cell[BoxData[
         RowBox[{"www", ".", "win", ".", "tue", ".", "nl"}], "/", 
         RowBox[{"~", "aeb"}]}], "/", "2"}], 
       RowBox[{"WF02", "/", 
-       RowBox[{"zeta", ".", "pdf"}]}]}]}]}], "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"zeta", ".", "pdf"}]}], "\[IndentingNewLine]", "Is", " ", "a", 
+      " ", "genus", " ", "3", " ", "curve", " ", "over", " ", "F_", "2"}]}]}],
+    "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
     RowBox[{"SolveForEks", "[", 
@@ -494,7 +560,8 @@ Cell[BoxData[
    3.7274146951372776`*^9}, {3.727414754385728*^9, 3.727414784781148*^9}, {
    3.727414947490693*^9, 3.7274150206388083`*^9}, 3.7274154649375267`*^9, {
    3.7274155056454687`*^9, 3.7274155085048757`*^9}, {3.7274155391772327`*^9, 
-   3.7274155710681095`*^9}, {3.7274156205866814`*^9, 3.727415703018879*^9}}],
+   3.7274155710681095`*^9}, {3.7274156205866814`*^9, 3.727415703018879*^9}, {
+   3.7286715867171926`*^9, 3.7286715967174234`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -674,16 +741,17 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 14961, 381, 1192, "Input"],
+Cell[557, 20, 2437, 62, 218, "Input"],
+Cell[2997, 84, 15006, 381, 1192, "Input"],
 Cell[CellGroupData[{
-Cell[15543, 405, 3792, 91, 252, "Input"],
-Cell[19338, 498, 1338, 28, 31, "Output"],
-Cell[20679, 528, 911, 13, 31, "Output"],
-Cell[21593, 543, 1690, 30, 57, "Output"],
-Cell[23286, 575, 1038, 17, 31, "Output"],
-Cell[24327, 594, 1336, 28, 31, "Output"],
-Cell[25666, 624, 1064, 17, 31, "Output"],
-Cell[26733, 643, 908, 13, 31, "Output"]
+Cell[18028, 469, 3986, 94, 292, "Input"],
+Cell[22017, 565, 1338, 28, 31, "Output"],
+Cell[23358, 595, 911, 13, 31, "Output"],
+Cell[24272, 610, 1690, 30, 57, "Output"],
+Cell[25965, 642, 1038, 17, 31, "Output"],
+Cell[27006, 661, 1336, 28, 31, "Output"],
+Cell[28345, 691, 1064, 17, 31, "Output"],
+Cell[29412, 710, 908, 13, 31, "Output"]
 }, Open  ]]
 }
 ]
