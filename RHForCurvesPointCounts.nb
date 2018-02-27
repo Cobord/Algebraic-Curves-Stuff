@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     31008,        751]
-NotebookOptionsPosition[     30336,        726]
-NotebookOutlinePosition[     30699,        742]
-CellTagsIndexPosition[     30656,        739]
+NotebookDataLength[     34915,        858]
+NotebookOptionsPosition[     34048,        827]
+NotebookOutlinePosition[     34411,        843]
+CellTagsIndexPosition[     34368,        840]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -463,7 +463,9 @@ Cell[BoxData[
    3.7274125411149855`*^9}, {3.7274125780216675`*^9, 3.727412654869563*^9}, {
    3.7274126888263397`*^9, 3.727412809344848*^9}, {3.7274129279822083`*^9, 
    3.727413134202016*^9}, {3.7274152203766255`*^9, 3.727415229329856*^9}, 
-   3.7274152658813105`*^9, {3.728671096212781*^9, 3.72867109816591*^9}}],
+   3.7274152658813105`*^9, {3.728671096212781*^9, 3.72867109816591*^9}, {
+   3.7287396209454384`*^9, 3.728739694175135*^9}, {3.7287397246286287`*^9, 
+   3.7287397760689373`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -722,6 +724,105 @@ Cell[BoxData["20"], "Output",
    3.727415509208002*^9, {3.7274155487240915`*^9, 3.727415574943158*^9}, {
    3.727415624367981*^9, 3.7274156386181355`*^9}, {3.7274156688552885`*^9, 
    3.727415704721995*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"The", " ", "example", " ", "of", " ", 
+      RowBox[{"y", "^", "2"}]}], " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "^", "3"}], " ", "+", " ", 
+       RowBox[{"48622", 
+        RowBox[{"x", "^", "2"}]}], " ", "+", " ", "x"}], " ", "=", 
+      RowBox[{
+       RowBox[{
+       "0", " ", "of", " ", "genus", " ", "1", " ", "over", " ", "q"}], "=", 
+       RowBox[{
+        RowBox[{"p", "^", "2"}], "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", "^", "255"}], "-", "19"}], ")"}], "^", "2"}], " ", 
+         "is", " ", "the", " ", "standard", " ", "curve", " ", "used", " ", 
+         "after", " ", "the", " ", "NSA", " ", 
+         RowBox[{"backdoor", "."}]}]}]}]}]}], ";", " ", 
+    RowBox[{
+     RowBox[{
+     "Too", " ", "big", " ", "for", " ", "quick", " ", "example", " ", "so", 
+      " ", "here", " ", "is", " ", "a", " ", "smaller", " ", 
+      RowBox[{"one", ".", " ", 
+       RowBox[{"y", "^", "2"}]}]}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "^", "3"}], "+", 
+       RowBox[{"2", " ", "and", " ", "p"}]}], "=", "7"}]}]}], 
+   "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"p", "=", "7"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Counts", " ", "over", " ", "p", " ", "and", " ", 
+     RowBox[{"p", "^", "2"}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"basicPointCounts", "=", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "63"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SolveForEks", "[", 
+     RowBox[{"basicPointCounts", ",", "1", ",", "p"}], "]"}], "[", 
+    RowBox[{"[", "1", "]"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Count", " ", "over", " ", 
+     RowBox[{"p", "^", "9"}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"GiveMthPointCount", "[", 
+    RowBox[{"basicPointCounts", ",", "1", ",", "p", ",", "9"}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"Counts", " ", "for", " ", 
+      RowBox[{"Sym", "^", "0"}]}], ",", 
+     RowBox[{"Sym", "^", "1"}], ",", 
+     RowBox[{
+      RowBox[{"Sym", "^", "2"}], " ", "and", " ", 
+      RowBox[{"Sym", "^", "3"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"Sym", "^", "1"}], " ", "is", " ", "the", " ", "original", " ", 
+      "curve", " ", "so", " ", "it", " ", "better", " ", "be", " ", "the", 
+      " ", 
+      RowBox[{"basicPointCounts", "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"symmetricPowerCounts1", "[", 
+    RowBox[{"basicPointCounts", ",", "1", ",", "p", ",", "3"}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.7287390104325857`*^9, 3.7287394330003633`*^9}, {
+  3.728739523989421*^9, 3.7287395444271507`*^9}, {3.728740060261856*^9, 
+  3.7287400947071238`*^9}, {3.728740138066986*^9, 3.7287401405827656`*^9}, {
+  3.7287403411301336`*^9, 3.728740372746372*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["e", "1"], "\[Rule]", 
+    RowBox[{"-", "1"}]}], ",", 
+   RowBox[{
+    SubscriptBox["e", "2"], "\[Rule]", "7"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.728740102847847*^9, 3.728740147426467*^9}}],
+
+Cell[BoxData["40366188"], "Output",
+ CellChangeTimes->{{3.728740102847847*^9, 3.728740147426467*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "9", ",", "72", ",", "513"}], "}"}]], "Output",
+ CellChangeTimes->{{3.728740102847847*^9, 3.728740147442119*^9}}]
 }, Open  ]]
 },
 WindowSize->{707, 504},
@@ -742,16 +843,22 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 2437, 62, 218, "Input"],
-Cell[2997, 84, 15006, 381, 1192, "Input"],
+Cell[2997, 84, 15112, 383, 1192, "Input"],
 Cell[CellGroupData[{
-Cell[18028, 469, 3986, 94, 292, "Input"],
-Cell[22017, 565, 1338, 28, 31, "Output"],
-Cell[23358, 595, 911, 13, 31, "Output"],
-Cell[24272, 610, 1690, 30, 57, "Output"],
-Cell[25965, 642, 1038, 17, 31, "Output"],
-Cell[27006, 661, 1336, 28, 31, "Output"],
-Cell[28345, 691, 1064, 17, 31, "Output"],
-Cell[29412, 710, 908, 13, 31, "Output"]
+Cell[18134, 471, 3986, 94, 292, "Input"],
+Cell[22123, 567, 1338, 28, 31, "Output"],
+Cell[23464, 597, 911, 13, 31, "Output"],
+Cell[24378, 612, 1690, 30, 57, "Output"],
+Cell[26071, 644, 1038, 17, 31, "Output"],
+Cell[27112, 663, 1336, 28, 31, "Output"],
+Cell[28451, 693, 1064, 17, 31, "Output"],
+Cell[29518, 712, 908, 13, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30463, 730, 3030, 76, 312, "Input"],
+Cell[33496, 808, 267, 8, 31, "Output"],
+Cell[33766, 818, 101, 1, 31, "Output"],
+Cell[33870, 821, 162, 3, 31, "Output"]
 }, Open  ]]
 }
 ]
