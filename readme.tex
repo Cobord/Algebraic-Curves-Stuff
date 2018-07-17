@@ -213,6 +213,15 @@ Once you have that, you can plug that back in and recover the count over $q^m$ f
 If the $\omega_i$ are provided, the point counts over all $q^m$ for $1 \cdots m_{max}$ are given through SolveForNms.
 \end{cor}
 
+\begin{theorem}[Hasse-Weil Bound]
+\begin{eqnarray*}
+\abs{N_{m} - (q^m + 1)} &\leq& 2 g \sqrt{q^m}
+\end{eqnarray*}
+
+So we may write $N_m = q^m + 1 + \epsilon_m$ where $\abs{\epsilon_m} \leq 2 g \sqrt{q^m}$. This way instead of providing the $N_m$ data, one can provide the smaller $\epsilon_m$ data instead.
+
+\end{theorem}
+
 \begin{definition}[$Z_{mot,Kapranov}$]
 \begin{eqnarray*}
 Z_{mot,Kapranov} (X,u) &=& \sum u^n [Sym^n X]\\
@@ -244,7 +253,16 @@ For $a \in f(C) \subset \mathbb{N}$, solve for
 \end{definition}
 
 \begin{definition}[Abelian Variety]
+A connected projective algebraic group over the base field $k$. The group law on the points becomes abelian group.
 \end{definition}
+
+\begin{definition}[Dual abelian variety]
+For $A$, there is a dual $A^\vee$. This has the universal property for parameterizing families of degree $0$ line bundles.
+\end{definition}
+
+\begin{cor}[Weil Pairing]
+Take the $n$ torsion in both $A$ and $A^\vee$. They are Cartier duals. If $A$ is an elliptic curve, this is Weil pairing.
+\end{cor}
 
 \begin{remark}
 Embedding arbitrary abelian variety into a Jacobian. After allowing yourself an infinite field like $\bar{\mathbb{F}_p}$.
@@ -257,6 +275,10 @@ There is the map $M_g \to A_g$ from the moduli space of genus $g$ curves to the 
 So pick a point in this abelian variety and see the cyclic group it generates. The fact that the structure maps were all algebraic makes the operations you need to do over and over again efficient.
 
 In particular if the curve is an elliptic curve, really should think of that group law as happening on Jacobian of an elliptic curve, but with the coincidence that that is elliptic curve again. However, this tells you how it generates for higher genus.
+
+\begin{definition}[CM Type]
+An abelian variety is of CM type when $End (A) \otimes \mathbb{Q}$ contains a commutative subring of dimension $2d$ over $\mathbb{Q}$. For $d=1$, this means that $End(A)$ is an order in an imaginary quadratic field.
+\end{definition}
 
 \subsection{Elliptic Curves}
 
@@ -294,6 +316,8 @@ So have the corresponding elliptic curve in Legendre form and the new expression
 
 \end{lemma}
 
+\url{http://www.hyperelliptic.org/EFD/g1p/auto-shortw-jacobian.html}
+
 \begin{definition}[Jacobi embedding]
 \end{definition}
 
@@ -311,6 +335,8 @@ For the SophieGermain.ipynb
 
 \section{Continued Fractions}
 
-for the ContinuedFraction.nb
+Given an $x$ and $maxDepth$, RationalFracToModular in ContinuedFraction.nb turns $x$ into a continued fraction and then gives the associated element in $Y \in SL(2,\mathbb{Z})$. $Y$ acting on the point at $\infty$ with the usual fractional linear transformation action returns $x$.
+
+The graph is of one of the entries of $Y$ as a function of $x \in (0,1)$.
 
 \end{document}
