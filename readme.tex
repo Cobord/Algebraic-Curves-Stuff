@@ -230,4 +230,87 @@ where $[Sym^n X]$ is the motive of $Sym^n X$. In particular, can give the points
 This means we can recover the point counts of $Sym^n C$ from the point counts $N_m$ that were given. This is done in symmetricPowerCounts1. In particular, you can get the point count for $Sym^g C$. That is given by the function jacobianSize1.
 \end{cor}
 
+\section{Crypto}
+
+\begin{definition}[Discrete Logarithm]
+Let $C$ be a finite cyclic group with generator $g_0$. $f \; C \to \mathbb{N}$ an injective set map.
+
+For $a \in f(C) \subset \mathbb{N}$, solve for
+
+\begin{eqnarray*}
+\log_{g_0} (a) &=& \text{min} \; \;  \setof { n \mid n \leftarrow \mathbb{N} , f (g_0^n) = a }\\
+\end{eqnarray*}
+
+\end{definition}
+
+\begin{definition}[Abelian Variety]
+\end{definition}
+
+\begin{remark}
+Embedding arbitrary abelian variety into a Jacobian. After allowing yourself an infinite field like $\bar{\mathbb{F}_p}$.
+
+\url{https://mathoverflow.net/questions/304314/is-every-abelian-variety-a-subvariety-of-a-jacobian}
+
+There is the map $M_g \to A_g$ from the moduli space of genus $g$ curves to the moduli space of abelian varieties of dimension $g$. It takes curves of genus $g$ to their Jacobians. The Schottky problem asks to characterize this image.
+\end{remark}
+
+So pick a point in this abelian variety and see the cyclic group it generates. The fact that the structure maps were all algebraic makes the operations you need to do over and over again efficient.
+
+In particular if the curve is an elliptic curve, really should think of that group law as happening on Jacobian of an elliptic curve, but with the coincidence that that is elliptic curve again. However, this tells you how it generates for higher genus.
+
+\subsection{Elliptic Curves}
+
+\begin{definition}[Weirstrauss form]
+\begin{eqnarray*}
+y^2 &=& x^3 + a x + b
+\end{eqnarray*}
+
+Points are stored as $(x,y,isInfinity)$ triples. If $isInfinity=True$ the $x,y$ don't matter.
+
+\end{definition}
+
+\begin{definition}[Legendre form]
+\begin{eqnarray*}
+y^2 &=& x (x-1) (x - j)
+\end{eqnarray*}
+
+Points are stored as $(x,y,isInfinity)$ triples. If $isInfinity=True$ the $x,y$ don't matter.
+\end{definition}
+
+\begin{lemma}[Conversion]
+Suppose we have a solution in Weirstrauss form with certain $a,b$.
+
+\begin{eqnarray*}
+x^3 + a x + b &=& (x - x_1) (x - x_2) (x - x_3)\\
+\tilde{x} &=& x - x_1\\
+x^3 + a x + b &\to& \tilde{x} ( \tilde{x} + x_1 - x_2) (\tilde{x} + x_1 - x_3)\\
+X &=& \frac{1}{(x_2 - x_1)}  \tilde{x}\\
+x^3 + a x + b &\to& (x_2 - x_1)^{3} X ( X - 1) (X + \frac{x_1 - x_3}{x_2 - x_1})\\
+Y &=& (x_2 - x_1)^{3/2} y\\
+Y^2 &=& X ( X - 1) (X + \frac{x_1 - x_3}{x_2 - x_1})\\
+\end{eqnarray*}
+
+So have the corresponding elliptic curve in Legendre form and the new expression for the same point as $X,Y$.
+
+\end{lemma}
+
+\begin{definition}[Jacobi embedding]
+\end{definition}
+
+\begin{lemma}[Addition in Weirstrauss]
+Given via the function .. in the ipynb
+\end{lemma}
+
+\begin{lemma}[Addition in Legendre]
+Given via the function .. in the ipynb
+\end{lemma}
+
+\section{Sophie Germain}
+
+For the SophieGermain.ipynb
+
+\section{Continued Fractions}
+
+for the ContinuedFraction.nb
+
 \end{document}
