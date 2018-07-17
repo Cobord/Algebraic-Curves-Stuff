@@ -1,0 +1,233 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry} 
+\geometry{letterpaper}   
+
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,bbm,mathrsfs,stmaryrd}
+\usepackage{url}
+
+%%% Theorems and references %%%
+\usepackage[amsmath,thmmarks]{ntheorem}
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+\theoremstyle{change}
+
+\newtheorem{defn}[equation]{Definition}
+\newtheorem{definition}[equation]{Definition}
+\newtheorem{thm}[equation]{Theorem}
+\newtheorem{theorem}[equation]{Theorem}
+\newtheorem{prop}[equation]{Proposition}
+\newtheorem{proposition}[equation]{Proposition}
+\newtheorem{lemma}[equation]{Lemma}
+\newtheorem{cor}[equation]{Corollary}
+\newtheorem{conj}[equation]{Conjecture}
+\newtheorem{conjecture}[equation]{Conjecture}
+\newtheorem{exercise}[equation]{Exercise}
+\newtheorem{example}[equation]{Example}
+
+\theorembodyfont{\upshape}
+\theoremsymbol{\ensuremath{\Diamond}}
+\newtheorem{eg}[equation]{Example}
+\newtheorem{remark}[equation]{Remark}
+
+\theoremstyle{nonumberplain}
+
+\theoremsymbol{\ensuremath{\Box}}
+\newtheorem{proof}{Proof}
+
+\qedsymbol{\ensuremath{\Box}}
+
+\creflabelformat{equation}{#2(#1)#3} 
+
+\crefname{equation}{equation}{equations}
+\crefname{eg}{example}{examples}
+\crefname{defn}{definition}{definitions}
+\crefname{prop}{proposition}{propositions}
+\crefname{thm}{Theorem}{Theorems}
+\crefname{lemma}{lemma}{lemmas}
+\crefname{cor}{corollary}{corollaries}
+\crefname{remark}{remark}{remarks}
+\crefname{section}{Section}{Sections}
+\crefname{subsection}{Section}{Sections}
+
+\crefformat{equation}{#2equation~(#1)#3} 
+\crefformat{eg}{#2example~#1#3} 
+\crefformat{defn}{#2definition~#1#3} 
+\crefformat{prop}{#2proposition~#1#3} 
+\crefformat{thm}{#2Theorem~#1#3} 
+\crefformat{lemma}{#2lemma~#1#3} 
+\crefformat{cor}{#2corollary~#1#3} 
+\crefformat{remark}{#2remark~#1#3} 
+\crefformat{section}{#2Section~#1#3} 
+\crefformat{subsection}{#2Section~#1#3} 
+
+\Crefformat{equation}{#2Equation~(#1)#3} 
+\Crefformat{eg}{#2Example~#1#3} 
+\Crefformat{defn}{#2Definition~#1#3} 
+\Crefformat{prop}{#2Proposition~#1#3} 
+\Crefformat{thm}{#2Theorem~#1#3} 
+\Crefformat{lemma}{#2Lemma~#1#3} 
+\Crefformat{cor}{#2Corollary~#1#3} 
+\Crefformat{remark}{#2Remark~#1#3} 
+\Crefformat{section}{#2Section~#1#3} 
+\Crefformat{subsection}{#2Section~#1#3} 
+
+
+\numberwithin{equation}{section}
+
+
+%%% Tikz stuff %%%
+
+\usepackage{tikz}
+\tikzset{dot/.style={circle,draw,fill,inner sep=1pt}}
+\usepackage{braids}
+\usepackage{tqft}
+\usetikzlibrary{tqft}
+\usetikzlibrary{cd}
+\usetikzlibrary{arrows}
+%%% Letters, Symbols, Words %%%
+
+\newcommand\Aa{{\cal A}}
+\newcommand\Oo{{\cal O}}
+\newcommand\Uu{{\cal U}}
+\newcommand\NN{{\mathbb N}}
+\newcommand\RR{{\mathbb R}}
+\newcommand\Ddd{\mathscr{D}}
+\renewcommand{\d}{{\,\rm d}}
+\newcommand\T{{\rm T}}
+
+\newcommand\mono{\hookrightarrow}
+\newcommand\sminus{\smallsetminus}
+\newcommand\st{{\textrm{ s.t.\ }}}
+\newcommand\ket[1]{\mid #1 \rangle}
+\newcommand\bra[1]{\langle #1 \mid}
+\newcommand\setof[1]{\{ #1 \}}
+\newcommand\lt{<}
+\newcommand\abs[1]{ \mid #1 \mid }
+\newcommand\conjbar[1]{\overline{#1}}
+
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\dVol}{dVol}
+\DeclareMathOperator{\ev}{ev}
+\DeclareMathOperator{\fiber}{fiber}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\tr}{tr}
+
+
+\title{README}
+\author{Ammar Husain}
+
+\begin{document}
+\maketitle
+
+\section{Modular Forms}
+
+\begin{definition}[Modular/Cusp Forms]
+$S_k (N)$ transform with a factor of $(c \tau + d)^k$ under $\Gamma_0 (N)$ where $c \equiv 0$ modulo $N$. They must vanish at $\infty$. $M_k (N)$ don't have to vanish at $\infty$. In terms of $q = e^{2 \pi i \tau}$ $S_k$ gives a q expansion holomorphic on the disc vanishing at the origin. $M_k (N)$ doesn't have to vanish at the origin.
+\end{definition}
+
+Acting on $M_k (N=1)$. That is $\Gamma_0 (1) = SL(2,\mathbb{Z})$ without $N$ condition on $c$ entry and $k$ gives the weight.
+
+For $r \geq 1$ and $(n,m)=1$
+
+\begin{eqnarray*}
+T_{nm} &=& T_n T_m = T_m T_n\\
+T_{p^{r+1}} &=& T_{p^r} T_p - p^{k-1} T_{p^{r-1}}\\
+T_{p^2} &=& T_{p} T_p - p^{k-1}\\
+T_{p^3} &=& (T_{p} T_p - p^{k-1} ) T_p - p^{k-1} T_p\\
+&=& T_p^3 - p^{k-1} T_p - p^{k-1} T_p\\
+T_{p^4} &=& (T_p^3 - 2 p^{k-1} T_p) T_p - p^{k-1} (T_{p}^2 - p^{k-1})\\
+&=& T_p^4 - 3 p^{k-1} T_p^2 + (p^{k-1})^2\\
+\end{eqnarray*}
+
+\begin{cor}
+For a general $T_n$ one can factor $n$ and then use these identities to reduce to a polynomial in the $T_p$ for only primes $p$.
+\end{cor}
+
+\begin{proof}
+\begin{eqnarray*}
+n &=& p_1^{a_1} p_2^{a_2} \cdots\\
+T_n &=& T_{p_1^{a_1}} \cdots\\
+&=& (T_{p_1^{a_1-1}} T_p - p^{k-1} T_{p_1^{a_1-2}}) \cdots\\
+\end{eqnarray*}
+\end{proof}
+
+\begin{eqnarray*}
+f &\equiv& \sum_{m=0}^\infty c_m q^m\\
+T_p f &=& \sum_{\mu=0}^\infty c_{p\mu} q^{\mu} + \sum_{\nu=0}^\infty c_\nu q^{p \nu}
+\end{eqnarray*}
+
+If $f \in S_k (1)$, then rescale so starts with $1*q$.
+
+Now looking for Hecke eigenforms. If we know $T_p$ is acting by a scalar $\lambda_p$, then we know that $T_{p^r}$ are acting by scalars as well
+
+\begin{eqnarray*}
+T_{p^2} f &=& ( \lambda_p^2 - p^{k-1} )f\\
+\end{eqnarray*}
+
+\begin{theorem}[Eichler-Selberg]
+Formula for trace of $T_n$ on $S_k (1)$.
+\end{theorem}
+
+\begin{cor}
+If we know all the traces for $T_{p^n}$ up to $d-1$ where $d$ is dimension of the $S_k (1)$ we can find characteristic polynomial for $T_p$.
+\end{cor}
+
+\begin{proof}
+The first term of $T_{p^r}$ is $T_p^r$ so knowledge of traces of $T_{p^r}$ can be backsubstituted to recover traces of $T_p^r$ then use formula for characteristic polynomial in terms of traces of powers.
+This is what CharPolyHelper does in the Mathematica file. It takes the list of $\tr T_{p^r}$ and outputs the list of $\tr T_p^r$. CharPolyHelper2 is supposed to transfer that information back into the characteristic polynomial using formula of $\tr A^r$ in terms of symmetric functions of eigenvalues back to the characteristic polynomial which has those eigenvalues as roots.
+\end{proof}
+
+\section{Point Counts}
+
+\begin{definition}[Zeta Function]
+\begin{eqnarray*}
+Z (C , u ) &=& e^{\sum_{m=0}^\infty \frac{N_m}{m} u^m}\\
+\end{eqnarray*}
+
+where $N_m$ is the point count over $q^m$.
+\end{definition}
+
+\begin{thm}[Weil]
+\begin{eqnarray*}
+Z (C,u) &=& \frac{P(u)}{(1-u)(1-q u)}
+\end{eqnarray*}
+
+where $P$ is a polynomial that can be written as
+
+\begin{eqnarray*}
+P(u) &=& \prod_{i=1}^{2g} (1- \omega_i u)\\
+&=& 1 + \sum e_k (-u)^k
+\end{eqnarray*}
+
+\end{thm}
+
+\begin{cor}
+If you are given $N_m$ for $m=1 \cdots 2g$, then can recover the $e_k$ symmetric functions of the $\omega_i$. This is SolveForEks in the Mathematica notebook.
+
+Once you have that, you can plug that back in and recover the count over $q^m$ for even higher $m$ without solving that much harder equation. This is GiveMthPointCount.
+
+If the $\omega_i$ are provided, the point counts over all $q^m$ for $1 \cdots m_{max}$ are given through SolveForNms.
+\end{cor}
+
+\begin{definition}[$Z_{mot,Kapranov}$]
+\begin{eqnarray*}
+Z_{mot,Kapranov} (X,u) &=& \sum u^n [Sym^n X]\\
+\end{eqnarray*}
+
+where $[Sym^n X]$ is the motive of $Sym^n X$. In particular, can give the points from the motive. Call that map $\mu$.
+
+\begin{eqnarray*}
+\mu Z_{mot,Kapranov} (X,u) &=& Z(X,u)
+\end{eqnarray*}
+
+\end{definition}
+
+\begin{cor}
+This means we can recover the point counts of $Sym^n C$ from the point counts $N_m$ that were given. This is done in symmetricPowerCounts1. In particular, you can get the point count for $Sym^g C$. That is given by the function jacobianSize1.
+\end{cor}
+
+\end{document}
